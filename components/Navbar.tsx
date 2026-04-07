@@ -24,14 +24,17 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 ${
         scrolled
-          ? "bg-black/95 border-b border-[rgba(0,255,65,0.2)] backdrop-blur-sm"
-          : "bg-transparent"
+          ? "bg-[#07090e]/95 border-b border-[rgba(0,217,100,0.2)] backdrop-blur-sm"
+          : "bg-[#07090e]/80 border-b border-[rgba(0,217,100,0.08)] backdrop-blur-sm"
       }`}
     >
+      
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
+          <div className="hidden md:flex items-center gap-8"></div>
+          
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <span className="text-[#00ff41] text-lg font-bold tracking-widest group-hover:neon-green transition-all">

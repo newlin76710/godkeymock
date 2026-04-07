@@ -11,10 +11,6 @@
 # Production
 /build
 
-# Env files
-.env*.local
-.env
-
 # Vercel
 .vercel
 

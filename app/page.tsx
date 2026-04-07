@@ -22,202 +22,157 @@ export default function HomePage() {
       {/* ── HERO ── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <MatrixRainLazy />
-
-        {/* Vignette */}
-        <div className="absolute inset-0 bg-radial-[ellipse_at_center] from-transparent via-black/60 to-black/90 pointer-events-none" />
+        <div className="absolute inset-0 bg-radial-[ellipse_at_center] from-transparent via-black/50 to-black/85 pointer-events-none" />
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          {/* Top badge */}
-          <div className="inline-flex items-center gap-2 border border-[rgba(0,255,65,0.3)] px-4 py-1.5 text-xs tracking-widest text-[rgba(0,255,65,0.6)] mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00ff41] animate-pulse" />
+          <div className="inline-flex items-center gap-2 border border-[rgba(0,217,100,0.25)] rounded-full px-5 py-1.5 text-xs tracking-widest text-[rgba(0,217,100,0.55)] mb-8">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#00d964] animate-pulse" />
             8591 練功大師 × 神鍵墨客
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00ff41] animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#00d964] animate-pulse" />
           </div>
 
-          {/* Main glitch title */}
           <h1
             className="glitch text-5xl sm:text-7xl lg:text-8xl font-bold tracking-widest neon-green mb-4"
+            style={{ fontFamily: "var(--font-mono)" }}
             data-text="神鍵墨客"
           >
             神鍵墨客
           </h1>
 
-          <div className="text-[rgba(0,255,255,0.8)] text-lg sm:text-2xl tracking-[0.3em] mb-2 neon-cyan">
+          <div className="text-[rgba(0,229,255,0.7)] text-lg sm:text-2xl tracking-[0.3em] mb-2 neon-cyan" style={{ fontFamily: "var(--font-mono)" }}>
             GODKEYMOCK
           </div>
 
-          <div className="text-[rgba(0,255,65,0.5)] text-sm tracking-[0.5em] mb-8">
-            ── 黑客 · 龐克 · 全端傳說 ──
+          <div className="text-[rgba(0,217,100,0.4)] text-sm tracking-[0.4em] mb-8">
+            ── 全端開發 · 資安研究 · 技術傳說 ──
           </div>
 
-          {/* Name */}
           <div className="mb-6">
-            <p className="text-2xl sm:text-3xl text-[#00ff41] tracking-wider">
-              林成翰 <span className="text-[rgba(0,255,65,0.5)] text-lg">/ Shawn Lin</span>
+            <p className="text-2xl sm:text-3xl text-[#00d964] tracking-wider">
+              林成翰 <span className="text-[rgba(0,217,100,0.45)] text-lg">/ Shawn Lin</span>
             </p>
-            <p className="text-[rgba(0,255,65,0.45)] text-sm mt-1 tracking-widest">
+            <p className="text-[rgba(0,217,100,0.5)] text-sm mt-1 tracking-wider">
               技術經理 · 資深全端工程師 · 軟體顧問
             </p>
           </div>
 
-          {/* Quote */}
-          <blockquote className="border-l-2 border-[rgba(0,255,65,0.3)] pl-4 text-[rgba(0,255,65,0.5)] text-sm sm:text-base italic max-w-xl mx-auto mb-10">
+          <blockquote className="border-l-2 border-r-2 border-[rgba(0,217,100,0.2)] px-6 text-[rgba(0,217,100,0.55)] text-sm sm:text-base italic max-w-xl mx-auto mb-10">
             &ldquo;人生的價值在於創造人生的價值，<br className="hidden sm:block" />
             生命的意義在於活出生命的意義&rdquo;
           </blockquote>
 
-          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link
-              href="/about"
-              className="btn-hack px-8 py-3 text-sm tracking-widest uppercase"
-            >
-              [關於我]
+            <Link href="/about" className="btn-hack px-8 py-3 text-sm tracking-widest uppercase" style={{ fontFamily: "var(--font-mono)" }}>
+              關於我
             </Link>
-            <Link
-              href="/projects"
-              className="btn-hack px-8 py-3 text-sm tracking-widest uppercase border-[rgba(0,255,255,0.5)] text-[rgba(0,255,255,0.8)] hover:text-black"
-              style={{ borderColor: "rgba(0,255,255,0.5)", color: "rgba(0,255,255,0.8)" }}
-            >
-              [專案成就]
+            <Link href="/projects" className="btn-hack px-8 py-3 text-sm tracking-widest uppercase" style={{ borderColor: "rgba(0,229,255,0.4)", color: "rgba(0,229,255,0.8)", fontFamily: "var(--font-mono)" }}>
+              專案成就
             </Link>
-            <Link
-              href="/contact"
-              className="btn-hack px-8 py-3 text-sm tracking-widest uppercase"
-            >
-              [聯絡我]
+            <Link href="/contact" className="btn-hack px-8 py-3 text-sm tracking-widest uppercase" style={{ fontFamily: "var(--font-mono)" }}>
+              聯絡我
             </Link>
           </div>
 
-          {/* Stats */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {stats.map((s) => (
-              <div
-                key={s.label}
-                className="hack-card p-4 text-center"
-              >
-                <div className="text-2xl sm:text-3xl font-bold neon-green">{s.value}</div>
-                <div className="text-[rgba(0,255,65,0.7)] text-xs mt-1">{s.label}</div>
-                <div className="text-[rgba(0,255,65,0.3)] text-[10px] mt-0.5 tracking-wider">{s.sub}</div>
+              <div key={s.label} className="hack-card p-4 text-center">
+                <div className="text-2xl sm:text-3xl font-bold neon-green" style={{ fontFamily: "var(--font-mono)" }}>{s.value}</div>
+                <div className="text-[rgba(0,217,100,0.8)] text-xs mt-1">{s.label}</div>
+                <div className="text-[rgba(0,217,100,0.35)] text-[10px] mt-0.5 tracking-wider">{s.sub}</div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[rgba(0,255,65,0.3)] text-xs tracking-widest animate-bounce">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[rgba(0,217,100,0.3)] text-xs tracking-widest animate-bounce">
           ↓ SCROLL
         </div>
       </section>
 
-      {/* ── QUICK INTRO ── */}
-      <section className="relative z-10 py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Photo */}
-            <div className="relative flex justify-center">
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80">
-                {/* Rotating border */}
-                <div className="absolute inset-0 border border-[rgba(0,255,65,0.3)] rotate-3" />
-                <div className="absolute inset-0 border border-[rgba(0,255,255,0.2)] -rotate-3" />
-                <Image
-                  src="/godkey.png"
-                  alt="神鍵墨客 林成翰"
-                  fill
-                  sizes="(max-width: 640px) 256px, 320px"
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-xs text-[rgba(0,255,65,0.7)] tracking-widest">
-                  [神鍵墨客.exe]
-                </div>
-              </div>
-            </div>
+      {/* ── QUICK INTRO — 置中單欄 ── */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="section-label mb-2" style={{ fontFamily: "var(--font-mono)" }}>&gt; PROFILE.TXT</p>
+          <h2 className="text-3xl font-bold text-[#00d964] mb-10" style={{ fontFamily: "var(--font-mono)" }}>我是誰？</h2>
 
-            {/* Text */}
-            <div className="space-y-6">
-              <div>
-                <p className="text-[rgba(0,255,65,0.4)] text-xs tracking-widest mb-2">
-                  &gt; PROFILE.TXT
-                </p>
-                <h2 className="text-3xl font-bold text-[#00ff41] mb-4">
-                  我是誰？
-                </h2>
-              </div>
-
-              <div className="space-y-3 text-[rgba(0,255,65,0.65)] text-sm leading-relaxed">
-                <p>
-                  台灣大學資訊工程系畢業，擁有 <span className="text-[#00ff41]">15+ 年</span>全端開發經驗。
-                  從趨勢科技的資安研究，到中信銀行的 FinTech 系統，再到帶領團隊打造 AI 配對平台——
-                  我在每個戰場都留下了印記。
-                </p>
-                <p>
-                  在 8591 遊戲平台上，我是<span className="text-[#00ff41]">練功大師</span>，
-                  精通各式遊戲外掛與按鍵精靈腳本；在現實世界，我是開發過獲 <span className="text-[#ff0040]">Gmail 採用</span>的
-                  垃圾信防禦系統的工程師，擁有美國專利。
-                </p>
-                <p>
-                  象棋六段、全國冠軍。邏輯即武器，程式即修行。
-                </p>
-              </div>
-
-              {/* Skill tags */}
-              <div className="flex flex-wrap gap-2 pt-2">
-                {skills.map((s) => (
-                  <span key={s} className="hack-tag">{s}</span>
-                ))}
-              </div>
-
-              <Link
-                href="/about"
-                className="btn-hack inline-block px-6 py-2.5 text-sm tracking-widest"
-              >
-                完整履歷 →
-              </Link>
+          {/* Photo centered */}
+          <div className="flex justify-center mb-10">
+            <div className="relative w-52 h-52 sm:w-64 sm:h-64">
+              <div className="absolute inset-0 border border-[rgba(0,217,100,0.25)] rounded-lg rotate-2" />
+              <div className="absolute inset-0 border border-[rgba(0,229,255,0.15)] rounded-lg -rotate-2" />
+              <Image
+                src="/godkey.png"
+                alt="神鍵墨客 林成翰"
+                fill
+                sizes="(max-width: 640px) 208px, 256px"
+                className="object-cover rounded-lg grayscale hover:grayscale-0 transition-all duration-500"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg" />
             </div>
           </div>
+
+          {/* Text */}
+          <div className="space-y-4 text-[rgba(0,217,100,0.75)] text-sm leading-relaxed mb-8 text-left">
+            <p>
+              台灣大學資訊工程系畢業，擁有 <span className="text-[#00d964] font-semibold">15+ 年</span>全端開發經驗。
+              從趨勢科技的資安研究，到中信銀行的 FinTech 系統，再到帶領團隊打造 AI 配對平台——
+              在每個領域都留下了深刻的技術足跡。
+            </p>
+            <p>
+              主導開發 Email Spam 防禦系統，攔截率達 99.9%，獲得<span className="text-[rgba(0,229,255,0.85)]"> 美國專利</span>，
+              目前 Gmail 採用此技術。在 8591 遊戲平台享有<span className="text-[#00d964] font-semibold">練功大師</span>美譽。
+            </p>
+            <p>象棋六段全國冠軍，邏輯思維與技術能力兼備，能快速掌握任何新技術。</p>
+          </div>
+
+          {/* Skill tags */}
+          <div className="flex flex-wrap gap-2 justify-center mb-8">
+            {skills.map((s) => (
+              <span key={s} className="hack-tag">{s}</span>
+            ))}
+          </div>
+
+          <Link href="/about" className="btn-hack inline-block px-6 py-2.5 text-sm tracking-widest" style={{ fontFamily: "var(--font-mono)" }}>
+            完整履歷 →
+          </Link>
         </div>
       </section>
 
-      {/* ── HACKER IDENTITY ── */}
-      <section className="relative z-10 py-20 px-4 border-y border-[rgba(0,255,65,0.08)]">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-[rgba(0,255,65,0.4)] text-xs tracking-widest mb-4">&gt; IDENTITY.LOG</p>
-          <h2 className="text-3xl font-bold text-[#00ff41] mb-12">雙重身份</h2>
+      {/* ── IDENTITY ── */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="section-label mb-3" style={{ fontFamily: "var(--font-mono)" }}>&gt; IDENTITY.LOG</p>
+          <h2 className="text-3xl font-bold text-[#00d964] mb-4" style={{ fontFamily: "var(--font-mono)" }}>雙重身份</h2>
+          <p className="text-[rgba(0,217,100,0.45)] text-sm mb-12 max-w-lg mx-auto">
+            技術世界與現實世界的兩種角色，相輔相成
+          </p>
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Godkey */}
-            <div className="hack-card p-8 group">
-              <div className="text-4xl mb-4 text-[#00ff41] tracking-widest font-bold group-hover:neon-pulse">
-                神鍵墨客
-              </div>
-              <div className="text-[rgba(0,255,255,0.6)] text-xs tracking-widest mb-4">GODKEYMOCK</div>
-              <p className="text-[rgba(0,255,65,0.55)] text-sm leading-relaxed">
-                鍵盤即神器，墨水即程式碼。精通駭客技術與資安防禦，
-                在趨勢科技磨練三年，深諳 APT 攻擊與防禦之道。
-                程式碼是武器，系統是戰場。
+            <div className="hack-card p-8 text-center">
+              <div className="text-3xl mb-3 text-[#00d964] tracking-widest font-bold" style={{ fontFamily: "var(--font-mono)" }}>神鍵墨客</div>
+              <div className="text-[rgba(0,229,255,0.5)] text-xs tracking-widest mb-4" style={{ fontFamily: "var(--font-mono)" }}>GODKEYMOCK</div>
+              <p className="text-[rgba(0,217,100,0.65)] text-sm leading-relaxed mb-5 text-left">
+                精通資安防禦技術，在趨勢科技磨練三年，深入研究 APT 攻擊防禦之道。
+                主導開發獲美國專利的 Email 防禦系統，實力獲 Gmail 技術採用肯定。
               </p>
-              <div className="mt-4 flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 justify-center">
                 {["C/C++", "Python", "CyberSec", "APT Defense", "美國專利"].map(t => (
-                  <span key={t} className="hack-tag-cyan hack-tag">{t}</span>
+                  <span key={t} className="hack-tag hack-tag-cyan">{t}</span>
                 ))}
               </div>
             </div>
 
-            {/* Trainer */}
-            <div className="hack-card p-8 group">
-              <div className="text-4xl mb-4 text-[#00ff41] tracking-widest font-bold group-hover:neon-pulse">
-                練功大師
-              </div>
-              <div className="text-[rgba(0,255,255,0.6)] text-xs tracking-widest mb-4">TRAINING MASTER · 8591</div>
-              <p className="text-[rgba(0,255,65,0.55)] text-sm leading-relaxed">
-                8591 遊戲平台的傳說人物。深夜撰寫遊戲外掛，
-                按鍵精靈腳本信手拈來。自動練功、抓寶可夢、
-                管理數千位打手——虛擬江湖中的無冕之王。
+            <div className="hack-card p-8 text-center">
+              <div className="text-3xl mb-3 text-[#00d964] tracking-widest font-bold" style={{ fontFamily: "var(--font-mono)" }}>練功大師</div>
+              <div className="text-[rgba(0,229,255,0.5)] text-xs tracking-widest mb-4" style={{ fontFamily: "var(--font-mono)" }}>TRAINING MASTER · 8591</div>
+              <p className="text-[rgba(0,217,100,0.65)] text-sm leading-relaxed mb-5 text-left">
+                8591 遊戲平台的知名人物，深諳自動化腳本開發。
+                業餘遊戲工作室經營者，將程式技術應用於創業實踐，
+                管理大規模虛擬社群的實戰經驗。
               </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {["按鍵精靈", "遊戲外掛", "Python Bot", "8591", "虛擬代練"].map(t => (
-                  <span key={t} className="hack-tag-red hack-tag">{t}</span>
+              <div className="flex flex-wrap gap-2 justify-center">
+                {["按鍵精靈", "自動化腳本", "Python Bot", "8591", "虛擬代練"].map(t => (
+                  <span key={t} className="hack-tag hack-tag-red">{t}</span>
                 ))}
               </div>
             </div>

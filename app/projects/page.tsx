@@ -117,11 +117,11 @@ const projects = [
   {
     id: "trainer",
     title: "練功大師 YouTube 頻道",
-    subtitle: "8591 · 按鍵精靈 · 遊戲外掛教學",
+    subtitle: "8591 · 按鍵精靈 · 自動化腳本教學",
     period: "長期進行中",
     company: "個人",
     image: "/lianggong.png",
-    tags: ["按鍵精靈", "Python", "遊戲外掛", "YouTube", "8591"],
+    tags: ["按鍵精靈", "Python", "自動化腳本", "YouTube", "8591"],
     color: "green",
     stats: [{ v: "8591", l: "平台傳說" }, { v: "千人+", l: "管理打手" }],
     desc: "8591 遊戲平台的練功大師。線上教學如何利用按鍵精靈撰寫各式遊戲或 LINE 外掛。業餘遊戲工作室，管理數千位打手，經營虛擬遊戲代練產業。",
@@ -151,104 +151,109 @@ const projects = [
   },
 ];
 
+const mono = { fontFamily: "var(--font-mono)" };
+
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen pt-24 pb-20 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div className="min-h-screen pt-24">
+        {/* ── HEADER ── */}
+        <section className="py-16 px-[5%]">
+          <div className="max-w-[1100px] mx-auto">
+            <p className="section-label mb-2" style={mono}>&gt; PROJECTS.LOG</p>
+            <h1 className="glitch section-title mb-0" style={mono} data-text="專案成就">專案成就</h1>
+            <div className="section-bar" />
+            <p className="text-[rgba(0,217,100,0.55)] text-sm max-w-xl">
+              15 年橫跨資安、FinTech、AI、電商、社交平台的代表性作品
+            </p>
+          </div>
+        </section>
 
-        {/* Header */}
-        <div className="mb-16 text-center">
-          <p className="text-[rgba(0,255,65,0.4)] text-xs tracking-widest mb-3">&gt; PROJECTS.LOG</p>
-          <h1 className="glitch text-4xl sm:text-5xl font-bold neon-green mb-4" data-text="專案成就">
-            專案成就
-          </h1>
-          <p className="text-[rgba(0,255,65,0.45)] text-sm max-w-xl mx-auto">
-            15 年橫跨資安、FinTech、AI、電商、社交平台的代表性作品
-          </p>
-        </div>
-
-        {/* Projects grid */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {projects.map((p) => (
-            <div key={p.id} className="hack-card group overflow-hidden">
-              {/* Image */}
-              <div className="relative h-40 overflow-hidden">
-                <Image
-                  src={p.image}
-                  alt={p.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 grayscale group-hover:grayscale-0"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0a0a0a]" />
-                {/* Period badge */}
-                <div className="absolute top-3 right-3 text-[10px] tracking-widest text-[rgba(0,255,65,0.5)] border border-[rgba(0,255,65,0.2)] px-2 py-0.5 bg-black/60">
-                  {p.period}
-                </div>
-                {/* Company */}
-                <div className="absolute bottom-3 left-4 text-[10px] text-[rgba(0,255,65,0.5)] tracking-wider">
-                  {p.company}
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-5">
-                <div className="mb-3">
-                  <h2 className={`font-bold text-lg mb-0.5 ${
-                    p.color === "red" ? "text-[#ff0040]" :
-                    p.color === "cyan" ? "text-[rgba(0,255,255,0.85)]" :
-                    "text-[#00ff41]"
-                  }`}>{p.title}</h2>
-                  <p className="text-[rgba(0,255,65,0.4)] text-xs tracking-wide">{p.subtitle}</p>
-                </div>
-
-                {/* Stats */}
-                <div className="flex gap-4 mb-4">
-                  {p.stats.map((s) => (
-                    <div key={s.l} className="text-center">
-                      <div className="text-[#00ff41] font-bold text-base">{s.v}</div>
-                      <div className="text-[rgba(0,255,65,0.4)] text-[10px]">{s.l}</div>
+        {/* ── PROJECTS GRID ── */}
+        <section className="py-16 px-[5%] border-t border-[rgba(0,217,100,0.07)]">
+          <div className="max-w-[1100px] mx-auto">
+            <div className="grid md:grid-cols-2 gap-6">
+              {projects.map((p) => (
+                <div key={p.id} className="hack-card group overflow-hidden">
+                  {/* Image */}
+                  <div className="relative h-40 overflow-hidden">
+                    <Image
+                      src={p.image}
+                      alt={p.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      loading="lazy"
+                      decoding="async"
+                      className={`object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 grayscale group-hover:grayscale-0${p.image === "/cert.jpg" ? " blur-sm" : ""}`}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#07090e]" />
+                    <div className="absolute top-3 right-3 text-[10px] tracking-widest text-[rgba(0,217,100,0.5)] border border-[rgba(0,217,100,0.2)] px-2 py-0.5 bg-black/60" style={mono}>
+                      {p.period}
                     </div>
-                  ))}
+                    <div className="absolute bottom-3 left-0 right-0 text-center text-[10px] text-[rgba(0,217,100,0.5)] tracking-wider">
+                      {p.company}
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-5">
+                    <div className="mb-3">
+                      <h2 className={`font-bold text-lg mb-0.5 ${p.color === "red" ? "text-[rgba(255,51,102,0.9)]" :
+                          p.color === "cyan" ? "text-[rgba(0,229,255,0.85)]" :
+                            "text-[#00d964]"
+                        }`} style={mono}>{p.title}</h2>
+                      <p className="text-[rgba(0,217,100,0.45)] text-xs tracking-wide">{p.subtitle}</p>
+                    </div>
+
+                    {/* Stats */}
+                    <div className="flex gap-6 mb-4">
+                      {p.stats.map((s) => (
+                        <div key={s.l} className="text-center">
+                          <div className="text-[#00d964] font-bold text-base" style={mono}>{s.v}</div>
+                          <div className="text-[rgba(0,217,100,0.4)] text-[10px]">{s.l}</div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <p className="text-[rgba(0,217,100,0.65)] text-sm leading-relaxed mb-4">{p.desc}</p>
+
+                    {/* Highlights */}
+                    <ul className="space-y-1.5 mb-4">
+                      {p.highlights.map((h) => (
+                        <li key={h} className="text-[rgba(0,217,100,0.55)] text-xs flex gap-2">
+                          <span className="text-[rgba(0,217,100,0.3)] shrink-0">›</span>
+                          {h}
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-1.5">
+                      {p.tags.map((t) => (
+                        <span key={t} className={`hack-tag text-[10px] ${p.color === "red" ? "hack-tag-red" :
+                            p.color === "cyan" ? "hack-tag-cyan" : ""
+                          }`}>{t}</span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-
-                <p className="text-[rgba(0,255,65,0.55)] text-sm leading-relaxed mb-4">{p.desc}</p>
-
-                {/* Highlights */}
-                <ul className="space-y-1 mb-4">
-                  {p.highlights.map((h) => (
-                    <li key={h} className="text-[rgba(0,255,65,0.45)] text-xs flex gap-2">
-                      <span className="text-[rgba(0,255,65,0.3)] shrink-0">›</span>
-                      {h}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-1.5">
-                  {p.tags.map((t) => (
-                    <span key={t} className={`hack-tag text-[10px] ${
-                      p.color === "red" ? "hack-tag-red" :
-                      p.color === "cyan" ? "hack-tag-cyan" : ""
-                    }`}>{t}</span>
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        </section>
 
-        {/* CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-[rgba(0,255,65,0.4)] text-sm mb-6">
-            想了解更多或洽談合作？
-          </p>
-          <Link href="/contact" className="btn-hack px-8 py-3 text-sm tracking-widest">
-            [聯絡我]
-          </Link>
-        </div>
-
+        {/* ── CTA ── */}
+        <section className="py-16 px-[5%] border-t border-[rgba(0,217,100,0.07)]">
+          <div className="max-w-[1100px] mx-auto text-center">
+            <p className="text-[rgba(0,217,100,0.5)] text-sm mb-6">
+              想了解更多或洽談合作？
+            </p>
+            <Link href="/contact" className="btn-hack px-8 py-3 text-sm tracking-widest" style={mono}>
+              聯絡我
+            </Link>
+          </div>
+        </section>
       </div>
-    </div>
+    </section>
   );
 }

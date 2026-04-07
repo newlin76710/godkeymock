@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Share_Tech_Mono } from "next/font/google";
+import { Share_Tech_Mono, Noto_Sans_TC } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,6 +8,13 @@ const shareTechMono = Share_Tech_Mono({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-mono",
+  display: "swap",
+});
+
+const notoSansTC = Noto_Sans_TC({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -28,7 +35,7 @@ export const metadata: Metadata = {
   authors: [{ name: "林成翰 Shawn Lin" }],
   openGraph: {
     title: "神鍵墨客 × 練功大師 | 林成翰 Shawn Lin",
-    description: "15+ 年全端開發 | 駭客精神 | 龐克風格",
+    description: "15+ 年全端開發 | 資安專利 | 全端傳說",
     type: "website",
     locale: "zh_TW",
   },
@@ -40,10 +47,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="zh-TW" className={shareTechMono.variable}>
-      <body className={`${shareTechMono.className} bg-black text-[#00ff41] antialiased`}>
+    <html lang="zh-TW" className={`${shareTechMono.variable} ${notoSansTC.variable}`}>
+      <body className={`${notoSansTC.className} bg-[#07090e] text-[rgba(0,217,100,0.85)] antialiased`}>
         <Navbar />
-        <main className="relative z-10">{children}</main>
+        <div className="h-16 bg-[#07090e]" />
+        <main className="relative z-10 pt-16">{children}</main>
         <Footer />
       </body>
     </html>

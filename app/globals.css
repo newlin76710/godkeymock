@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --matrix: #00ff41;
-  --cyan: #00ffff;
-  --red-hack: #ff0040;
-  --bg: #000000;
-  --bg-card: #0a0a0a;
-  --border: rgba(0, 255, 65, 0.2);
+  --matrix: #00d964;
+  --matrix-dim: rgba(0, 217, 100, 0.6);
+  --cyan: #00e5ff;
+  --red-hack: #ff3366;
+  --bg: #07090e;
+  --bg-card: #0d0f18;
+  --border: rgba(0, 217, 100, 0.18);
 }
 
 * {
@@ -21,32 +22,14 @@ html {
 
 body {
   background: var(--bg);
-  color: var(--matrix);
-  font-family: "Share Tech Mono", "Courier New", monospace;
+  color: rgba(0, 217, 100, 0.85);
+  font-family: "Share Tech Mono", "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", "Courier New", monospace;
+  line-height: 1.7;
   overflow-x: hidden;
   position: relative;
 }
 
-/* CRT scanline overlay */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(0, 0, 0, 0.03) 2px,
-    rgba(0, 0, 0, 0.03) 4px
-  );
-  pointer-events: none;
-  z-index: 9998;
-}
-
-/* Grid background */
+/* Very subtle grid background — barely visible */
 body::after {
   content: "";
   position: fixed;
@@ -55,14 +38,14 @@ body::after {
   width: 100%;
   height: 100%;
   background-image:
-    linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(0, 217, 100, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 217, 100, 0.018) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
   z-index: 0;
 }
 
-/* Glitch text effect */
+/* Glitch text effect — subtle, less frequent */
 .glitch {
   position: relative;
 }
@@ -78,86 +61,75 @@ body::after {
 }
 
 .glitch::before {
-  color: #00ffff;
-  animation: glitch1 3s infinite;
-  opacity: 0.8;
+  color: var(--cyan);
+  animation: glitch1 5s infinite;
+  opacity: 0.5;
 }
 
 .glitch::after {
-  color: #ff0040;
-  animation: glitch2 3s infinite;
-  opacity: 0.8;
+  color: var(--red-hack);
+  animation: glitch2 5s infinite;
+  opacity: 0.5;
 }
 
 @keyframes glitch1 {
-  0%, 90%, 100% {
+  0%, 92%, 100% {
     clip-path: inset(100% 0 0 0);
     transform: translateX(0);
   }
-  92% {
-    clip-path: inset(20% 0 60% 0);
-    transform: translateX(-6px);
-  }
-  94% {
-    clip-path: inset(50% 0 30% 0);
-    transform: translateX(6px);
-  }
-  96% {
-    clip-path: inset(80% 0 5% 0);
+  93% {
+    clip-path: inset(20% 0 65% 0);
     transform: translateX(-4px);
   }
-  98% {
-    clip-path: inset(10% 0 85% 0);
+  95% {
+    clip-path: inset(55% 0 25% 0);
     transform: translateX(4px);
+  }
+  97% {
+    clip-path: inset(80% 0 8% 0);
+    transform: translateX(-3px);
   }
 }
 
 @keyframes glitch2 {
-  0%, 90%, 100% {
+  0%, 92%, 100% {
     clip-path: inset(100% 0 0 0);
     transform: translateX(0);
   }
-  92% {
-    clip-path: inset(65% 0 10% 0);
-    transform: translateX(6px);
-  }
-  94% {
-    clip-path: inset(30% 0 55% 0);
-    transform: translateX(-6px);
-  }
-  96% {
-    clip-path: inset(5% 0 80% 0);
+  93% {
+    clip-path: inset(60% 0 15% 0);
     transform: translateX(4px);
   }
-  98% {
-    clip-path: inset(85% 0 8% 0);
+  95% {
+    clip-path: inset(25% 0 50% 0);
     transform: translateX(-4px);
+  }
+  97% {
+    clip-path: inset(8% 0 75% 0);
+    transform: translateX(3px);
   }
 }
 
-/* Neon text */
+/* Neon text — toned down, only a soft glow */
 .neon-green {
   color: var(--matrix);
   text-shadow:
-    0 0 4px var(--matrix),
-    0 0 10px var(--matrix),
-    0 0 20px var(--matrix);
+    0 0 6px rgba(0, 217, 100, 0.6),
+    0 0 12px rgba(0, 217, 100, 0.25);
 }
 
 .neon-cyan {
   color: var(--cyan);
   text-shadow:
-    0 0 4px var(--cyan),
-    0 0 10px var(--cyan),
-    0 0 20px var(--cyan);
+    0 0 6px rgba(0, 229, 255, 0.5),
+    0 0 12px rgba(0, 229, 255, 0.2);
 }
 
 .neon-red {
   color: var(--red-hack);
   text-shadow:
-    0 0 4px var(--red-hack),
-    0 0 10px var(--red-hack),
-    0 0 20px var(--red-hack);
+    0 0 6px rgba(255, 51, 102, 0.5),
+    0 0 12px rgba(255, 51, 102, 0.2);
 }
 
 /* Terminal cursor */
@@ -171,10 +143,11 @@ body::after {
   50% { opacity: 0; }
 }
 
-/* Hacker card */
+/* Card */
 .hack-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
+  border-radius: 6px;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -196,21 +169,24 @@ body::after {
 }
 
 .hack-card:hover {
-  border-color: var(--matrix);
-  box-shadow: 0 0 5px rgba(0, 255, 65, 0.2), 0 0 20px rgba(0, 255, 65, 0.05);
+  border-color: rgba(0, 217, 100, 0.4);
+  box-shadow: 0 0 16px rgba(0, 217, 100, 0.06), 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Button */
 .btn-hack {
   background: transparent;
-  border: 1px solid var(--matrix);
+  border: 1px solid rgba(0, 217, 100, 0.5);
   color: var(--matrix);
   font-family: "Share Tech Mono", monospace;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   cursor: pointer;
+  border-radius: 4px;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
 }
 
 .btn-hack::before {
@@ -231,7 +207,8 @@ body::after {
 
 .btn-hack:hover {
   color: #000;
-  box-shadow: 0 0 10px var(--matrix), 0 0 20px var(--matrix);
+  border-color: var(--matrix);
+  box-shadow: 0 0 14px rgba(0, 217, 100, 0.35);
 }
 
 /* Scrollbar */
@@ -240,17 +217,18 @@ body::after {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: var(--bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--matrix);
+  background: rgba(0, 217, 100, 0.4);
+  border-radius: 2px;
 }
 
 /* Section divider */
 .section-divider {
   border: none;
-  border-top: 1px solid rgba(0, 255, 65, 0.15);
+  border-top: 1px solid rgba(0, 217, 100, 0.1);
   position: relative;
 }
 
@@ -259,67 +237,74 @@ body::after {
   position: absolute;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  background: #000;
+  background: var(--bg);
   padding: 0 1rem;
-  color: rgba(0, 255, 65, 0.4);
+  color: rgba(0, 217, 100, 0.35);
   font-size: 0.75rem;
 }
 
 /* Tag/badge */
 .hack-tag {
   display: inline-block;
-  border: 1px solid rgba(0, 255, 65, 0.3);
-  color: rgba(0, 255, 65, 0.7);
+  border: 1px solid rgba(0, 217, 100, 0.25);
+  color: rgba(0, 217, 100, 0.75);
+  background: rgba(0, 217, 100, 0.04);
   font-size: 0.7rem;
   padding: 2px 8px;
+  border-radius: 3px;
   font-family: "Share Tech Mono", monospace;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
 }
 
 .hack-tag-cyan {
-  border-color: rgba(0, 255, 255, 0.3);
-  color: rgba(0, 255, 255, 0.7);
+  border-color: rgba(0, 229, 255, 0.25);
+  color: rgba(0, 229, 255, 0.75);
+  background: rgba(0, 229, 255, 0.04);
 }
 
 .hack-tag-red {
-  border-color: rgba(255, 0, 64, 0.3);
-  color: rgba(255, 0, 64, 0.7);
+  border-color: rgba(255, 51, 102, 0.25);
+  color: rgba(255, 51, 102, 0.75);
+  background: rgba(255, 51, 102, 0.04);
 }
 
 /* Timeline */
 .timeline-line {
-  border-left: 1px solid rgba(0, 255, 65, 0.2);
+  border-left: 1px solid rgba(0, 217, 100, 0.2);
 }
 
 /* Skill bar */
 .skill-bar-bg {
-  background: rgba(0, 255, 65, 0.08);
-  border: 1px solid rgba(0, 255, 65, 0.1);
+  background: rgba(0, 217, 100, 0.06);
+  border: 1px solid rgba(0, 217, 100, 0.1);
+  border-radius: 2px;
 }
 
 .skill-bar-fill {
-  background: linear-gradient(90deg, var(--matrix), rgba(0, 255, 65, 0.5));
-  box-shadow: 0 0 6px var(--matrix);
+  background: linear-gradient(90deg, var(--matrix), rgba(0, 217, 100, 0.5));
+  box-shadow: 0 0 6px rgba(0, 217, 100, 0.4);
+  border-radius: 2px;
   transition: width 1.5s ease;
 }
 
 /* Input */
 .hack-input {
-  background: rgba(0, 255, 65, 0.03);
-  border: 1px solid rgba(0, 255, 65, 0.2);
-  color: var(--matrix);
+  background: rgba(0, 217, 100, 0.03);
+  border: 1px solid rgba(0, 217, 100, 0.2);
+  color: rgba(0, 217, 100, 0.9);
   font-family: "Share Tech Mono", monospace;
+  border-radius: 4px;
   outline: none;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .hack-input:focus {
-  border-color: var(--matrix);
-  box-shadow: 0 0 8px rgba(0, 255, 65, 0.15);
+  border-color: rgba(0, 217, 100, 0.5);
+  box-shadow: 0 0 10px rgba(0, 217, 100, 0.1);
 }
 
 .hack-input::placeholder {
-  color: rgba(0, 255, 65, 0.3);
+  color: rgba(0, 217, 100, 0.28);
 }
 
 /* Fade in animation */
@@ -338,18 +323,18 @@ body::after {
   animation: fadeInUp 0.6s ease forwards;
 }
 
-/* Neon pulse */
+/* Neon pulse — subtle */
 @keyframes neonPulse {
   0%, 100% {
-    text-shadow: 0 0 4px var(--matrix), 0 0 10px var(--matrix), 0 0 20px var(--matrix);
+    text-shadow: 0 0 6px rgba(0, 217, 100, 0.6), 0 0 12px rgba(0, 217, 100, 0.25);
   }
   50% {
-    text-shadow: 0 0 8px var(--matrix), 0 0 20px var(--matrix), 0 0 40px var(--matrix), 0 0 60px var(--matrix);
+    text-shadow: 0 0 10px rgba(0, 217, 100, 0.8), 0 0 24px rgba(0, 217, 100, 0.4);
   }
 }
 
 .neon-pulse {
-  animation: neonPulse 2s ease-in-out infinite;
+  animation: neonPulse 3s ease-in-out infinite;
 }
 
 /* Typing animation */
@@ -362,4 +347,30 @@ body::after {
 @keyframes countUp {
   from { opacity: 0; transform: scale(0.5); }
   to { opacity: 1; transform: scale(1); }
+}
+
+/* Section label */
+.section-label {
+  color: rgba(0, 217, 100, 0.4);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Section title */
+.section-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 900;
+  color: var(--matrix);
+  font-family: "Share Tech Mono", "PingFang TC", "Microsoft JhengHei", monospace;
+}
+
+/* Section accent bar (replaces old .section-divider) */
+.section-bar {
+  width: 48px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--matrix), var(--cyan));
+  border-radius: 2px;
+  margin-top: 12px;
+  margin-bottom: 40px;
 }
