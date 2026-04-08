@@ -4,7 +4,8 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "專案成就 | 神鍵墨客 林成翰",
-  description: "林成翰的代表性專案：AI配對平台、土地大數據、FinTech系統、尋夢園聊天室、練功大師",
+  description:
+    "林成翰的代表性專案：AI配對平台、土地大數據、FinTech系統、尋夢園聊天室、練功大師",
 };
 
 const projects = [
@@ -15,9 +16,13 @@ const projects = [
     period: "2021 — 現在",
     company: "昱科網路",
     image: "/hack.jpg",
+    url: "https://www.ek21.com/dating",
     tags: ["React", "AI", "大數據", "Node.js", "配對算法"],
     color: "cyan",
-    stats: [{ v: "10,000+", l: "成功配對" }, { v: "AI", l: "偏好分析" }],
+    stats: [
+      { v: "10,000+", l: "成功配對" },
+      { v: "AI", l: "偏好分析" },
+    ],
     desc: "從零打造 AI 愛情媒合平台。運用大數據分析使用者偏好，成功促成超過一萬對配對。提供線上戀愛諮詢與線下聯誼服務，打造每位用戶的專屬戀愛小秘書。",
     highlights: [
       "AI 大數據分析使用者行為與偏好",
@@ -32,9 +37,13 @@ const projects = [
     period: "2021 — 現在",
     company: "昱科網路",
     image: "/hack.jpg",
+    url: "https://www.ek21.com",
     tags: ["WebSocket", "Node.js", "React", "Redis", "即時通訊"],
     color: "red",
-    stats: [{ v: "100+", l: "聊天室" }, { v: "即時", l: "互動功能" }],
+    stats: [
+      { v: "100+", l: "聊天室" },
+      { v: "即時", l: "互動功能" },
+    ],
     desc: "全台最大匿名聊天室平台，提供超過百個聊天室。具備炸彈丟擲、踢人、卡拉OK、私訊等互動功能，促進用戶間即興有趣的交流互動。",
     highlights: [
       "超過 100 個主題聊天室",
@@ -49,9 +58,13 @@ const projects = [
     period: "2018 — 2021",
     company: "MyGo商學苑 · 平安房屋",
     image: "/hack.jpg",
+    url: "https://www.mygobigdata.com",
     tags: ["React", "AI", "GIS", "Node.js", "地籍資料", "大數據"],
     color: "green",
-    stats: [{ v: "500萬+", l: "地籍筆數" }, { v: "億元+", l: "成交金額" }],
+    stats: [
+      { v: "500萬+", l: "地籍筆數" },
+      { v: "億元+", l: "成交金額" },
+    ],
     desc: "利用實價登錄資料，導入 AI 產生自動估價，讓建商參考每坪房價。具備大量調閱謄本功能，地圖顯示當前國家政府計畫區、法拍資料、國土計畫等。",
     highlights: [
       "全台超過 500 萬筆地籍與謄本資料",
@@ -67,9 +80,13 @@ const projects = [
     period: "2011 — 2014",
     company: "趨勢科技",
     image: "/cert.jpg",
+    url: "https://www.trendmicro.com/zh_tw/forHome.html",
     tags: ["C/C++", "Python", "APT防禦", "Machine Learning", "資安"],
     color: "red",
-    stats: [{ v: "99.9%", l: "攔截率" }, { v: "US", l: "美國專利" }],
+    stats: [
+      { v: "99.9%", l: "攔截率" },
+      { v: "US", l: "美國專利" },
+    ],
     desc: "主導開發 Email Spam 防禦系統，攔截率達 99.9%，成功申請美國專利，目前 Gmail 採用此技術。同期開發防毒、反垃圾郵件與 APT 防禦系統。",
     highlights: [
       "99.9% 垃圾信攔截率",
@@ -85,9 +102,13 @@ const projects = [
     period: "2017 — 2018",
     company: "中國信託商業銀行",
     image: "/hack.jpg",
+    url: "ctbcbank.com/content/twrbo/zh_tw/index.html",
     tags: ["Python", "R", "量化交易", "爬蟲", "風控", "外匯"],
     color: "cyan",
-    stats: [{ v: "17%", l: "年化報酬" }, { v: "自動化", l: "投資組合" }],
+    stats: [
+      { v: "17%", l: "年化報酬" },
+      { v: "自動化", l: "投資組合" },
+    ],
     desc: "透過爬蟲收集網路公開資料（期貨、選擇權、外匯等），自動演算最佳化投資組合，不斷回測與 rebalance，找出可年投報 17% 之投資策略。",
     highlights: [
       "自動化投資組合優化系統",
@@ -103,9 +124,13 @@ const projects = [
     period: "2009 — 2010",
     company: "中華民國陸軍砲兵學校",
     image: "/hack.jpg",
+    url: "https://www.mnd.gov.tw",
     tags: ["Visual Basic", "彈道計算", "系統架構", "國防"],
     color: "green",
-    stats: [{ v: "20萬+", l: "程式碼行數" }, { v: "3億", l: "等效價值" }],
+    stats: [
+      { v: "20萬+", l: "程式碼行數" },
+      { v: "3億", l: "等效價值" },
+    ],
     desc: "使用 VB 自研砲兵射擊指揮系統，成功重現美軍原預計以新台幣 3 億元出售之功能，實現國防自主。整合彈道計算、射角預測、氣象修正等演算邏輯。",
     highlights: [
       "超過 20 萬行程式碼",
@@ -121,9 +146,13 @@ const projects = [
     period: "長期進行中",
     company: "個人",
     image: "/lianggong.png",
+    url: "https://www.youtube.com/@8591god",
     tags: ["按鍵精靈", "Python", "自動化腳本", "YouTube", "8591"],
     color: "green",
-    stats: [{ v: "8591", l: "平台傳說" }, { v: "千人+", l: "管理打手" }],
+    stats: [
+      { v: "8591", l: "平台傳說" },
+      { v: "千人+", l: "管理打手" },
+    ],
     desc: "8591 遊戲平台的練功大師。線上教學如何利用按鍵精靈撰寫各式遊戲或 LINE 外掛。業餘遊戲工作室，管理數千位打手，經營虛擬遊戲代練產業。",
     highlights: [
       "按鍵精靈自動化腳本教學",
@@ -139,9 +168,13 @@ const projects = [
     period: "2022 — 現在",
     company: "個人專案",
     image: "/godkey2.png",
+    url: "https://www.rainbownumen.org",
     tags: ["Next.js", "React", "命理", "AI", "易經"],
     color: "cyan",
-    stats: [{ v: "命理", l: "大數據" }, { v: "西方+東方", l: "融合算法" }],
+    stats: [
+      { v: "命理", l: "大數據" },
+      { v: "西方+東方", l: "融合算法" },
+    ],
     desc: "利用西方彩虹數字與中國古老易經，結合生辰八字與命運機會，讓你的人生更加富足。融合東西方命理學的現代數位平台。",
     highlights: [
       "西方彩虹數字學系統",
@@ -160,8 +193,16 @@ export default function ProjectsPage() {
         {/* ── HEADER ── */}
         <section className="py-16 px-[5%]">
           <div className="max-w-[1100px] mx-auto">
-            <p className="section-label mb-2" style={mono}>&gt; PROJECTS.LOG</p>
-            <h1 className="glitch section-title mb-0" style={mono} data-text="專案成就">專案成就</h1>
+            <p className="section-label mb-2" style={mono}>
+              &gt; PROJECTS.LOG
+            </p>
+            <h1
+              className="glitch section-title mb-0"
+              style={mono}
+              data-text="專案成就"
+            >
+              專案成就
+            </h1>
             <div className="section-bar" />
             <p className="text-[rgba(0,217,100,0.55)] text-sm max-w-xl">
               15 年橫跨資安、FinTech、AI、電商、社交平台的代表性作品
@@ -174,69 +215,112 @@ export default function ProjectsPage() {
           <div className="max-w-[1100px] mx-auto">
             <div className="grid md:grid-cols-2 gap-6">
               {projects.map((p) => (
-                <div key={p.id} className="hack-card group overflow-hidden">
-                  {/* Image */}
-                  <div className="relative h-40 overflow-hidden">
-                    <Image
-                      src={p.image}
-                      alt={p.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      loading="lazy"
-                      decoding="async"
-                      className={`object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 grayscale group-hover:grayscale-0${p.image === "/cert.jpg" ? " blur-sm" : ""}`}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#07090e]" />
-                    <div className="absolute top-3 right-3 text-[10px] tracking-widest text-[rgba(0,217,100,0.5)] border border-[rgba(0,217,100,0.2)] px-2 py-0.5 bg-black/60" style={mono}>
-                      {p.period}
+                <a
+                  key={p.id}
+                  href={p.url}
+                  target="_blank" // 新視窗開啟
+                  rel="noopener noreferrer"
+                  className="group block"
+                >
+                  <div className="hack-card group overflow-hidden">
+                    <div className="relative h-40 overflow-hidden bg-black/80 p-4 flex flex-col justify-between">
+                      {/* 右上角時間 */}
+                      <div
+                        className="absolute top-3 right-3 text-[12px] tracking-widest text-[rgba(0,217,100,0.8)] border border-[rgba(0,217,100,0.2)] px-2 py-1 bg-black/60"
+                        style={mono}
+                      >
+                        {p.period}
+                      </div>
+
+                      {/* 下方公司名稱 */}
+                      <div className="absolute bottom-3 left-0 right-0 text-center text-[12px] text-[rgba(0,217,100,0.8)] tracking-wider">
+                        {p.company}
+                      </div>
+
+                      {/* 中間標題 */}
+                      <div className="absolute inset-0 flex items-center justify-center text-center px-4">
+                        <span className="text-white text-lg font-bold">
+                          {p.title}
+                        </span>
+                      </div>
                     </div>
-                    <div className="absolute bottom-3 left-0 right-0 text-center text-[10px] text-[rgba(0,217,100,0.5)] tracking-wider">
-                      {p.company}
+
+                    {/* Content */}
+                    <div className="p-5">
+                      <div className="mb-3">
+                        <h2
+                          className={`font-bold text-lg mb-0.5 ${
+                            p.color === "red"
+                              ? "text-[rgba(255,51,102,0.9)]"
+                              : p.color === "cyan"
+                                ? "text-[rgba(0,229,255,0.85)]"
+                                : "text-[#00d964]"
+                          }`}
+                          style={mono}
+                        >
+                          {p.title}
+                        </h2>
+                        <p className="text-[rgba(0,217,100,0.45)] text-xs tracking-wide">
+                          {p.subtitle}
+                        </p>
+                      </div>
+
+                      {/* Stats */}
+                      <div className="flex gap-6 mb-4">
+                        {p.stats.map((s) => (
+                          <div key={s.l} className="text-center">
+                            <div
+                              className="text-[#00d964] font-bold text-base"
+                              style={mono}
+                            >
+                              {s.v}
+                            </div>
+                            <div className="text-[rgba(0,217,100,0.4)] text-[10px]">
+                              {s.l}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+
+                      <p className="text-[rgba(0,217,100,0.65)] text-sm leading-relaxed mb-4">
+                        {p.desc}
+                      </p>
+
+                      {/* Highlights */}
+                      <ul className="space-y-1.5 mb-4">
+                        {p.highlights.map((h) => (
+                          <li
+                            key={h}
+                            className="text-[rgba(0,217,100,0.55)] text-xs flex gap-2"
+                          >
+                            <span className="text-[rgba(0,217,100,0.3)] shrink-0">
+                              ›
+                            </span>
+                            {h}
+                          </li>
+                        ))}
+                      </ul>
+
+                      {/* Tags */}
+                      <div className="flex flex-wrap gap-1.5">
+                        {p.tags.map((t) => (
+                          <span
+                            key={t}
+                            className={`hack-tag text-[10px] ${
+                              p.color === "red"
+                                ? "hack-tag-red"
+                                : p.color === "cyan"
+                                  ? "hack-tag-cyan"
+                                  : ""
+                            }`}
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
-
-                  {/* Content */}
-                  <div className="p-5">
-                    <div className="mb-3">
-                      <h2 className={`font-bold text-lg mb-0.5 ${p.color === "red" ? "text-[rgba(255,51,102,0.9)]" :
-                          p.color === "cyan" ? "text-[rgba(0,229,255,0.85)]" :
-                            "text-[#00d964]"
-                        }`} style={mono}>{p.title}</h2>
-                      <p className="text-[rgba(0,217,100,0.45)] text-xs tracking-wide">{p.subtitle}</p>
-                    </div>
-
-                    {/* Stats */}
-                    <div className="flex gap-6 mb-4">
-                      {p.stats.map((s) => (
-                        <div key={s.l} className="text-center">
-                          <div className="text-[#00d964] font-bold text-base" style={mono}>{s.v}</div>
-                          <div className="text-[rgba(0,217,100,0.4)] text-[10px]">{s.l}</div>
-                        </div>
-                      ))}
-                    </div>
-
-                    <p className="text-[rgba(0,217,100,0.65)] text-sm leading-relaxed mb-4">{p.desc}</p>
-
-                    {/* Highlights */}
-                    <ul className="space-y-1.5 mb-4">
-                      {p.highlights.map((h) => (
-                        <li key={h} className="text-[rgba(0,217,100,0.55)] text-xs flex gap-2">
-                          <span className="text-[rgba(0,217,100,0.3)] shrink-0">›</span>
-                          {h}
-                        </li>
-                      ))}
-                    </ul>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-1.5">
-                      {p.tags.map((t) => (
-                        <span key={t} className={`hack-tag text-[10px] ${p.color === "red" ? "hack-tag-red" :
-                            p.color === "cyan" ? "hack-tag-cyan" : ""
-                          }`}>{t}</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>
@@ -248,7 +332,11 @@ export default function ProjectsPage() {
             <p className="text-[rgba(0,217,100,0.5)] text-sm mb-6">
               想了解更多或洽談合作？
             </p>
-            <Link href="/contact" className="btn-hack px-8 py-3 text-sm tracking-widest" style={mono}>
+            <Link
+              href="/contact"
+              className="btn-hack px-8 py-3 text-sm tracking-widest"
+              style={mono}
+            >
               聯絡我
             </Link>
           </div>

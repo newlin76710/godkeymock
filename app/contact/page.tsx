@@ -24,7 +24,7 @@ const contactInfo = [
   },
   {
     label: "SALARY",
-    value: "年薪 200~250 萬",
+    value: "年薪 依公司規定",
     href: null,
     desc: "資深工程師 / 專案經理 / 顧問",
     icon: "💻",
@@ -66,7 +66,7 @@ export default function ContactPage() {
             {/* Contact info */}
             <div className="space-y-6">
               {/* Photo */}
-              <div className="relative w-full h-52 hack-card overflow-hidden mb-8">
+              <div className="relative w-full hack-card overflow-hidden mb-8 h-[32rem]">
                 <Image
                   src="/godkey2.png"
                   alt="神鍵墨客 林成翰"
