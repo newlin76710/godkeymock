@@ -4,7 +4,7 @@ import MatrixRainLazy from "@/components/MatrixRainLazy";
 
 const stats = [
   { value: "15+", label: "年工作經驗", sub: "Years XP" },
-  { value: "10K+", label: "成功配對", sub: "Couples Matched" },
+  { value: "100K+", label: "程式碼撰寫", sub: "Couples Matched" },
   { value: "99.9%", label: "垃圾信攔截率", sub: "Spam Blocked" },
   { value: "六段", label: "全國象棋冠軍", sub: "Chess Champion" },
 ];
@@ -97,7 +97,7 @@ export default function HomePage() {
 
           {/* Photo centered */}
           <div className="flex justify-center mb-10">
-            <div className="relative w-52 h-52 sm:w-64 sm:h-64">
+            <div className="relative w-96 h-52 sm:w-[512px] sm:h-64">
               <div className="absolute inset-0 border border-[rgba(0,217,100,0.25)] rounded-lg rotate-2" />
               <div className="absolute inset-0 border border-[rgba(0,229,255,0.15)] rounded-lg -rotate-2" />
               <Image
@@ -105,7 +105,7 @@ export default function HomePage() {
                 alt="神鍵墨客 林成翰"
                 fill
                 sizes="(max-width: 640px) 208px, 256px"
-                className="object-cover rounded-lg grayscale hover:grayscale-0 transition-all duration-500"
+                className="object-cover rounded-lg transition-all duration-500"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg" />
