@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
@@ -66,11 +67,13 @@ export default function ContactPage() {
             <div className="space-y-6">
               {/* Photo */}
               <div className="relative w-full hack-card overflow-hidden mb-8 h-[32rem]">
-                <img
+                <Image
                   src="/godkey2.png"
                   alt="神鍵墨客 林成翰"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 512px"
                   className="object-cover opacity-50 hover:opacity-70 transition-opacity"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80" />
                 <div className="absolute bottom-4 left-4">

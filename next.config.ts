@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
 
   images: {
     formats: ["image/avif", "image/webp"],   // AVIF 優先，WebP fallback
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    deviceSizes: [640, 828, 1080, 1200],     // 移除 750(≈828)、1920(無全寬圖)
+    imageSizes: [64, 128, 256, 384],         // 移除 16/32/48/96，本站圖片最小 ~200px
     minimumCacheTTL: 31536000,               // 轉換結果快取 1 年
     dangerouslyAllowSVG: false,              // 禁止 SVG 注入
     contentDispositionType: "inline",        // 直接顯示不下載
