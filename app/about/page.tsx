@@ -231,7 +231,7 @@ export default function AboutPage() {
                     <div className="absolute inset-0 border border-[rgba(0,217,100,0.25)] rounded-lg rotate-2" />
                     <div className="absolute inset-0 border border-[rgba(0,229,255,0.12)] rounded-lg -rotate-2" />
                     <Image
-                      src="/godkey.png"
+                      src="/godkey.webp"
                       alt="林成翰 Shawn Lin"
                       fill sizes="224px" priority
                       className="object-cover rounded-lg grayscale hover:grayscale-0 transition-all duration-500"

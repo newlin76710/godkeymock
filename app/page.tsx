@@ -100,7 +100,7 @@ export default function HomePage() {
               <div className="absolute inset-0 border border-[rgba(0,217,100,0.25)] rounded-lg rotate-2" />
               <div className="absolute inset-0 border border-[rgba(0,229,255,0.15)] rounded-lg -rotate-2" />
               <Image
-                src="/godkey.png"
+                src="/godkey.webp"
                 alt="神鍵墨客 林成翰"
                 sizes="(max-width: 640px) 208px, 256px"
                 className="object-cover rounded-lg transition-all duration-500"

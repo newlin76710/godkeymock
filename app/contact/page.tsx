@@ -68,7 +68,7 @@ export default function ContactPage() {
               {/* Photo */}
               <div className="relative w-full hack-card overflow-hidden mb-8 h-[32rem]">
                 <Image
-                  src="/godkey2.png"
+                  src="/godkey2.webp"
                   alt="神鍵墨客 林成翰"
                   fill
                   sizes="(max-width: 1024px) 100vw, 512px"
