@@ -8,7 +8,7 @@ export default function Footer() {
             <span className="text-[#00ff41]">神鍵墨客</span> × 練功大師
           </div>
           <div className="text-[rgba(0,255,65,0.25)] text-xs">
-            © {year} 林成翰 Shawn Lin — newlin76710@gmail.com
+            © {year} 林成翰 Shawn Lin
           </div>
           <div className="text-[rgba(0,255,65,0.25)] text-xs tracking-wider">
             [BUILD: {year}.STABLE]

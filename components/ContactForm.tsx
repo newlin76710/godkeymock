@@ -138,9 +138,6 @@ export default function ContactForm() {
         </form>
       )}
 
-      <p className="text-[rgba(0,217,100,0.25)] text-xs mt-4 text-center">
-        或直接發信至 newlin76710@gmail.com
-      </p>
     </div>
   );
 }

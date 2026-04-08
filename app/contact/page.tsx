@@ -9,13 +9,6 @@ export const metadata: Metadata = {
 
 const contactInfo = [
   {
-    label: "EMAIL",
-    value: "newlin76710@gmail.com",
-    href: "mailto:newlin76710@gmail.com",
-    desc: "09:00 ~ 21:00 回覆",
-    icon: "📧",
-  },
-  {
     label: "LOCATION",
     value: "台北市文山區",
     href: null,

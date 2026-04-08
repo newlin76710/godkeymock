@@ -176,7 +176,6 @@ export default function AboutPage() {
 
                 <div className="hack-card p-5 space-y-3">
                   {[
-                    ["EMAIL", "newlin76710@gmail.com"],
                     ["學歷", "國立台灣大學 資訊工程系"],
                     ["現職", "昱科網路 · 技術經理"],
                     ["年資", "15~16 年工作經歷"],
