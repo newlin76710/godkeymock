@@ -1,7 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import MatrixRainLazy from "@/components/MatrixRainLazy";
-
+import Image from "next/image";
 const stats = [
   { value: "15+", label: "年工作經驗", sub: "Years XP" },
   { value: "100K+", label: "程式碼撰寫", sub: "Couples Matched" },
@@ -103,10 +102,9 @@ export default function HomePage() {
               <Image
                 src="/godkey.png"
                 alt="神鍵墨客 林成翰"
-                fill
                 sizes="(max-width: 640px) 208px, 256px"
                 className="object-cover rounded-lg transition-all duration-500"
-                priority
+                fill priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg" />
             </div>
